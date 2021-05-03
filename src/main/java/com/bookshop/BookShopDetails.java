@@ -1,9 +1,9 @@
 package com.bookshop;
 
-public class BookDetails {
+public class BookShopDetails {
 		// TODO Auto-generated method stub
 	/**
-	 * Declaring variables needs in book shop.
+	 * Declaring variables required  for book shop.
 	 */
 	    public String language;
 		public String bookName;

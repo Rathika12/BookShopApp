@@ -3,13 +3,13 @@ package com.bookshop;
 import java.util.ArrayList;
 
 public class Book {
-	static ArrayList<BookDetails> books = new ArrayList<BookDetails>();
+	public static ArrayList<BookShopDetails> books = new ArrayList<BookShopDetails>();
 	/**
 	 * Add Book details into array list.
 	 * @param book
 	 */
 	
-	public static void addBook(BookDetails book) {
+	public static void addBook(BookShopDetails book) {
 		books.add(book);
 	}
 
@@ -22,7 +22,7 @@ public class Book {
 	//BookDetails book = new BookDetails();
 	public static void addBookDetails(String language,String name,int noBooks,int rate) {
 		//System.out.println("---------ADD BOOKS--------");
-		BookDetails book = new BookDetails();
+		BookShopDetails book = new BookShopDetails();
 		book.language = language;
 		book.bookName = name;
 		book.noOfBooks = noBooks;
@@ -36,7 +36,7 @@ public class Book {
 	public static void displayBooks() {
 		//System.out.println("--------DISPLAY BOOK DETAILS----------");
 		int i=0;
-		for(BookDetails detail:books) {
+		for(BookShopDetails detail:books) {
 			i++;
 			System.out.println("BOOK NUMBER "+i);
 			System.out.println("LANGUAGE "+detail.language);
@@ -50,10 +50,10 @@ public class Book {
 	 * @param language
 	 * @return boolean
 	 */
-	public static boolean searchCatogory(String language) {
+	public static boolean searchCatogoryLanguage(String language) {
 		boolean bookPresent = false;
 		int i=0;
-		for(BookDetails detail:books) {
+		for(BookShopDetails detail:books) {
 		   if(detail.language.equals(language)) {
 			   bookPresent = true;
 			   i++;
@@ -67,6 +67,26 @@ public class Book {
 	}
 		System.out.println("Total Number of books in language "+language+ " is " +i);
 		return  bookPresent;
+	}
+	/**
+	 *This method is used to search book by giving name. 
+	 * @param bookName
+	 * @return boolean
+	 */
+	public static boolean searchByBookName(String bookName) {
+		boolean valid = false;
+		for(BookShopDetails detail:books) {
+			   if(detail.bookName.equals(bookName)) {
+				   valid = true;
+				   System.out.println("Your result for searching  "+bookName);
+				   System.out.println("Book language "+detail.language);
+					System.out.println( "NO OF BOOKS " + detail.noOfBooks );
+					System.out.println("BOOK COST " + detail.cost);
+				   
+			   }
+				
+		}
+		return valid;
 	}
 	
 }

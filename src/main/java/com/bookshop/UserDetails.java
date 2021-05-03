@@ -34,20 +34,20 @@ public class UserDetails {
 		userList.add(user2);
 		userList.add(user3);
 		
-		/*
-		 * int i=1;
-		 * 
-		 * for (User user : userList) { System.out.println("USER "+ i);
-		 * System.out.println("NAME: "+user.name);
-		 * System.out.println("EMAIL: "+user.email);
-		 * System.out.println("MOBILE NUMBER: "+user.mobileNumber);
-		 * System.out.println("PASSWORD: "+user.password);
-		 * System.out.println("DOB: "+user.DOB); i++; }
-		 */ 
+		int i=1;
+		
+	      for (User user : userList) 
+	      { 
+	    	System.out.println("USER "+ i);  
+	        System.out.println("NAME: "+user.name);
+	        System.out.println("EMAIL: "+user.email);
+	        System.out.println("MOBILE NUMBER: "+user.mobileNumber);
+	        System.out.println("PASSWORD: "+user.password);
+	        System.out.println("DOB: "+user.DOB);
+	        i++;
+	      }
+	      
 		
 		}
-	   User display = new User();
-	   String str = display.toString();
-	   System.out.println(str);
 
 }
