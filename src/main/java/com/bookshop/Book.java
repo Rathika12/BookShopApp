@@ -45,6 +45,11 @@ public class Book {
 			System.out.println("BOOK COST " + detail.cost);
 		}
 	}
+	/**
+	 * This method helps to categorize the book using language.
+	 * @param language
+	 * @return boolean
+	 */
 	public static boolean searchCatogory(String language) {
 		boolean bookPresent = false;
 		int i=0;
