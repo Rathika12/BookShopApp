@@ -1,12 +1,21 @@
-package com.bookshop;
+package com.bookshoptestcase;
+
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
-public class UserDetails {
+import org.junit.Test;
+
+import com.bookshop.User;
+
+public class UserDetailsTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		UserDetailsTest.addUser();
 		
+}
+	static void addUser() {
 		User user1 = new User();
 		user1.name = "Rathika";
 		user1.email="rathika@gmail.com";
@@ -27,27 +36,21 @@ public class UserDetails {
 		user3.password = "pass123";
 		user3.mobileNumber = 7070707070L;
 		user3.DOB = "1996-07-01";
-		
 		//System.out.println("Name:  " + user3.name + "  Email: "+user3.email + "  Mobile Number:  " + user3.mobileNumber +"  Stage:  " +user3.stage + "  DOB:  " + user3.DOB);
 		ArrayList<User> userList = new ArrayList<User>();
 		userList.add(user1);
 		userList.add(user2);
 		userList.add(user3);
-		
-		/*
-		 * int i=1;
-		 * 
-		 * for (User user : userList) { System.out.println("USER "+ i);
-		 * System.out.println("NAME: "+user.name);
-		 * System.out.println("EMAIL: "+user.email);
-		 * System.out.println("MOBILE NUMBER: "+user.mobileNumber);
-		 * System.out.println("PASSWORD: "+user.password);
-		 * System.out.println("DOB: "+user.DOB); i++; }
-		 */ 
+	      for (User user : userList) 
+	      { 		      
+	        System.out.println("NAME: "+user.name);
+	        System.out.println("EMAIL: "+user.email);
+	        System.out.println("MOBILE NUMBER: "+user.mobileNumber);
+	        System.out.println("PASSWORD: "+user.password);
+	        System.out.println("DOB: "+user.DOB);
+	      }  
 		
 		}
-	   User display = new User();
-	   String str = display.toString();
-	   System.out.println(str);
 
+	}
 }

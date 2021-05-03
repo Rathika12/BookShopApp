@@ -14,7 +14,7 @@ public class Bill {
 	 * @param noOfBooks
 	 * @return
 	 */
-	public static int billCalculation(String bookName,int noOfBooks) {
+	public static int billCalculation(String bookName,int cost) {
 		
 		HashMap<String,Integer> bookDetails = new HashMap<String,Integer>();
 		bookDetails.put("THE ALCHAMIST", 500);
@@ -24,7 +24,7 @@ public class Bill {
 		int result=0;
 		if(bookDetails.containsKey(bookName)) {
 			int amount = bookDetails.get(bookName);
-			result = amount*noOfBooks;
+			result = amount*cost;
 		}
 		System.out.println(result);
 		return result;
