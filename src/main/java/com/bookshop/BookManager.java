@@ -3,6 +3,9 @@ package com.bookshop;
 import java.util.ArrayList;
 
 public class BookManager {
+	/**
+	 * Declaring Array list for book details.
+	 */
 	public static ArrayList<Book> books = new ArrayList<Book>();
 	/**
 	 * Add Book details into array list.

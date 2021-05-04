@@ -49,6 +49,10 @@ public class UserDetails {
 		UserDetailValidation.addUserDetails(userList);
 
 	}
+	/**
+	 * Display the added user details by passing array list.
+	 * @param userList
+	 */
 			
 		
 	public static  void displayUserDetails(ArrayList<User> userList) {
