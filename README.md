@@ -5,6 +5,7 @@
   *Tested the features:Namevalidation,email validation,mobile number validation,password validation.
 ####Feature 2:
   *Login for user by giving mobile number and password.
+  *That particular mobile number and password in hash map yet to tested.
   *Validated that if the correct user login or not.
 ####Feature 3:
   * Add book to the bookshop by giving book name,no.of books,book cost.
