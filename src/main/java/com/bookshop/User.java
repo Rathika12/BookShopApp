@@ -5,8 +5,8 @@ public class User {
 		public String email;
 		public long mobileNumber;
 		public String password;//Instance variable
-		static String stage = "Student";//static variable
-		public String DOB;
+		//static String stage = "Student";//static variable
+		//public String DOB;
 	
 	   
 		

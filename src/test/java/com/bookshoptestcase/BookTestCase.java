@@ -15,18 +15,13 @@ public class BookTestCase {
 	 * Display the book details after adding books.
 	 */
 	public void addDisplayBook() {
-		Book.addBookDetails("TAMIL","MAHABHARATHAM", 10, 2000);
-		Book.addBookDetails("TAMIL","PONNIN SELVAN",12, 1200);
-		Book.addBookDetails("ENGLISH","THE ALCHAMIST", 50, 700);
-		Book.addBookDetails("ENGLISH" ,"HARRY PARTOR", 100, 1500);
-		Book.addBookDetails("ENGLISH" ,"BLACK BEAUTY", 70, 650);
-		Book.addBookDetails("ENGLISH" ,"NEW MOON", 90, 800);
+		System.out.println("---------ADD BOOKS--------");
+	
+		BookManager.addBookDetails();
 		System.out.println("Books are added");
-		//Book.displayBooks();   
-		//Book.addBook(book);
 		//Book.updateDetails("NEW MOON", "NEW SUN");
-		//System.out.println("Display Books");
-		//Book.displayBooks();
+		System.out.println("-----------Display Books---------");
+		BookManager.displayBooks();
 		
 	}
 	@Test
@@ -39,7 +34,7 @@ public class BookTestCase {
 	public void searchBook1() {
 		String language = "TAMIL";
 		System.out.println("List of "+language+" books");
-		boolean catogory = Book.searchCatogoryLanguage(language);
+		boolean catogory = BookManager.searchCatogoryLanguage(language);
 		
 		assertEquals(true,catogory);
 	}
@@ -52,7 +47,7 @@ public class BookTestCase {
 	public void searchBook2() {
 		String language = "ENGLISH";
 		System.out.println("List of "+language+" books");
-		boolean catogory = Book.searchCatogoryLanguage(language);
+		boolean catogory = BookManager.searchCatogoryLanguage(language);
 		
 		assertEquals(true,catogory);
 	}
@@ -65,7 +60,7 @@ public class BookTestCase {
 	public void searchBook3() {
 		String language = "HINDHI";
 		System.out.println("List of "+language+" books");
-		boolean catogory = Book.searchCatogoryLanguage(language);
+		boolean catogory = BookManager.searchCatogoryLanguage(language);
 		
 		assertEquals(false,catogory);
 	}
@@ -78,7 +73,7 @@ public class BookTestCase {
 	public void searchBookByName1() {
 		String bookName = "NEW MOON";
 		System.out.println("Details for the book "+bookName);
-		boolean result = Book.searchByBookName(bookName);
+		boolean result = BookManager.searchByBookName(bookName);
 		
 		assertEquals(true,result);
 
@@ -92,7 +87,7 @@ public class BookTestCase {
 	public void searchBookByName2() {
 		String bookName = "MOON";
 		System.out.println("Details for the book "+bookName);
-		boolean result = Book.searchByBookName(bookName);
+		boolean result = BookManager.searchByBookName(bookName);
 		
 		assertEquals(false,result);
 
