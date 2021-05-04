@@ -22,7 +22,9 @@ public class Register {
 		login.put(8080808080L,"pass12");
 		login.put(7070707070L,"pass123");
 		boolean loginValid = true;
-		//Find if mobile number and password is mapped or not.
+		/**
+		 * Find if mobile number and password is mapped or not.
+		 */
 		if(login.containsKey(userNumber)) {
 			String passwordNew = login.get(userNumber);
 			if(passwordNew.equals(password)) {
