@@ -2,7 +2,7 @@ package com.bookshop;
 
 import java.util.ArrayList;
 
-public class UserDetails {
+public class UserManager {
 	/*
 	 * Create array list for user details.
 	 */

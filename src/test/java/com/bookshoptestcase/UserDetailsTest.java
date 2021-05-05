@@ -12,14 +12,14 @@ public class UserDetailsTest {
 	 * To add user details.
 	 */
 	public void addUser() {
-		UserDetails.addNewUser();
+		UserManager.addNewUser();
 	}
 	@Test
 	/**
 	 * To display user details.
 	 */
 	public void display() {
-		UserDetails.displayUserDetails(UserDetails.userList);
+		UserManager.displayUserDetails(UserManager.userList);
 	}
 	@Test
 	/**
