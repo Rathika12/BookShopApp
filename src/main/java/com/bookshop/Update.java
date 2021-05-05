@@ -17,8 +17,15 @@ public class Update {
 		bookDetails.put("NEW MOON", 50);
 		int noBooksModified = 0;
 		if(bookDetails.containsKey(bookName)) {
+			
 			int total = bookDetails.get(bookName);
-			noBooksModified = total-noOfBooks;
+			if(total<noOfBooks) {
+				noBooksModified = 0;
+			}
+			else {
+				noBooksModified = total-noOfBooks;
+			}
+			
 		}
 		System.out.println(noBooksModified);
 		return noBooksModified;

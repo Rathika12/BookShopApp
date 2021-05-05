@@ -47,5 +47,16 @@ public class UpdateTestCase {
 		assertEquals(151,res);
 		System.out.println("Incorect number of books");
 	}
+	@Test
+	/**
+	 * Validate updated no of books by giving invalid number of books to buy.
+	 * The no of books to buy is -1.
+	 */
+	public void updateTestCase5() {
+		int res = Update.updateNoOfBooks("HARRY PARTOR", 200);
+		assertEquals(0,res);
+		System.out.println("Incorect number of books");
+	}
+	
 
 }
