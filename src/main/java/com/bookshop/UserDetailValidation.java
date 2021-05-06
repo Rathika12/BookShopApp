@@ -10,8 +10,7 @@ public class UserDetailValidation {
     static String userName;
 	static String userEmail;
 	static String userPassword;
-	
-	 static long mobileNo;
+	static long mobileNo;
 	 /**
 	  * Adding user details to the static variables.
 	  * Call methods to validate the use details.

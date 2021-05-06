@@ -53,7 +53,7 @@ public class UpdateTestCase {
 	 * The no of books to buy is -1.
 	 */
 	public void updateTestCase5() {
-		int res = Update.updateNoOfBooks("HARRY PARTOR", 200);
+		int res = Update.updateNoOfBooks("THE ALCHAMIST", 200);
 		assertEquals(0,res);
 		System.out.println("Incorect number of books");
 	}
