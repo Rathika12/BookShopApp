@@ -96,15 +96,21 @@ public class UserDetailValidation {
       */
      public static boolean isValidMobileNum(long mobileNumber) {
 		 String number = String.valueOf(mobileNumber);
-    	 if(number.length()<=9 || number.equals(0)) {
-    		 return false;
-    	 }
-    	 return true;
+		 String regex = "^\\d{10}$";
+		 if(regex.matches(number)) {
+			 return true;
+		 }
+		 else {
+			 return false;
+		 }
+    		 
+
+    	
     	 
      }
      /**
       * Validating password.
-      * The password should have tha length greater than or equal to 5.
+      * The password should have the length greater than or equal to 5.
       * The password can have both characters or numbers.
       * @param userPassword2
       * @return
