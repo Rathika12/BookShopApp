@@ -10,7 +10,8 @@ public class UserDetailValidation {
     static String userName;
 	static String userEmail;
 	static String userPassword;
-	static long mobileNo;
+	
+	 static long mobileNo;
 	 /**
 	  * Adding user details to the static variables.
 	  * Call methods to validate the use details.
@@ -41,7 +42,7 @@ public class UserDetailValidation {
 			System.out.println("Invalid mobile number");
 		}
 		
-		boolean password = isValidPassword(userPassword);
+		boolean password = isValidPassword(userPassword,userName);
 		if(!password) {
 			System.out.println("Invalid password");
 		}
@@ -95,13 +96,14 @@ public class UserDetailValidation {
       */
      public static boolean isValidMobileNum(long mobileNumber) {
 		 String number = String.valueOf(mobileNumber);
-		 String regex = "^\\d{10}$";
-		 if(regex.matches(number)) {
-			 return true;
+		 boolean validMobileNo = false;
+		 if(number.length()==10) {
+			 validMobileNo = true;
 		 }
 		 else {
-			 return false;
+			validMobileNo = false; 
 		 }
+		 return validMobileNo;
     		 
 
     	
@@ -114,9 +116,10 @@ public class UserDetailValidation {
       * @param userPassword2
       * @return
       */
-     public static boolean isValidPassword(String userPassword2) {
+     public static boolean isValidPassword(String userPassword2,String userName) {
  		// TODO Auto-generated method stub
-    	 if(userPassword2.length()<=4) {
+    	 
+    	 if(userPassword2.length()<=4 || userName.contains(userPassword2)) {
     		 return false;
     	 }
  		return true;

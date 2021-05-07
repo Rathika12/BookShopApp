@@ -131,8 +131,9 @@ public class UserDetailsTest {
 	 */
 	public void userPasswordTestCase1() {
 		String password = "rath2633";
-		boolean valid = UserDetailValidation.isValidPassword(password);
-		assertTrue(valid);
+		String username = "tyuyurath26337878";
+		boolean valid = UserDetailValidation.isValidPassword(password,username);
+		assertFalse(valid);
 	}
 	@Test
 	/**
@@ -142,7 +143,8 @@ public class UserDetailsTest {
 	
 	public void userPasswordTestCase2() {
 		String password = "26333";
-		boolean valid = UserDetailValidation.isValidPassword(password);
+		String username = "rathika";
+		boolean valid = UserDetailValidation.isValidPassword(password,username);
 		assertTrue(valid);
 	}
 	@Test
@@ -152,7 +154,10 @@ public class UserDetailsTest {
 	 */
 	public void userPasswordTestCase3() {
 		String password = "rath";
-		boolean valid = UserDetailValidation.isValidPassword(password);
+		String username = "rathika";
+
+		boolean valid = UserDetailValidation.isValidPassword(password,username);
+
 		assertFalse(valid);
 	}
 	@Test
@@ -162,7 +167,10 @@ public class UserDetailsTest {
 	 */
 	public void userPasswordTestCase4() {
 		String password = "90";
-		boolean valid = UserDetailValidation.isValidPassword(password);
+		String username = "rathika";
+
+		boolean valid = UserDetailValidation.isValidPassword(password,username);
+
 		assertFalse(valid);
 	}
 	@Test
@@ -172,7 +180,8 @@ public class UserDetailsTest {
 	 */
 	public void userPasswordTestCase5() {
 		String password = "rathika";
-		boolean valid = UserDetailValidation.isValidPassword(password);
+		String username = "rathika";
+		boolean valid = UserDetailValidation.isValidPassword(password,username);
 		assertTrue(valid);
 	}
 

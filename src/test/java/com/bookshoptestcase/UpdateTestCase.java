@@ -45,7 +45,7 @@ public class UpdateTestCase {
 	public void updateTestCase4() {
 		int res = Update.updateNoOfBooks("HARRY PARTOR", -1);
 		assertEquals(151,res);
-		System.out.println("Incorect number of books");
+		System.out.println("Incorrect number of books");
 	}
 	@Test
 	/**
@@ -55,7 +55,7 @@ public class UpdateTestCase {
 	public void updateTestCase5() {
 		int res = Update.updateNoOfBooks("THE ALCHAMIST", 200);
 		assertEquals(0,res);
-		System.out.println("Incorect number of books");
+		System.out.println("Incorrect number of books");
 	}
 	
 
